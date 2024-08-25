@@ -14,19 +14,12 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     pkg_name = 'path_planner_server'
-    map_file_name = 'turtle_eight_columns.yaml'
-    map_file_path = FindPackageShare(pkg_name) + 'config' + map_file_name
-
-    # map_server_node = Node(
-    #         package='nav2_map_server',
-    #         executable='map_server',
-    #         name='map_server',
-    #         output='screen',
-    #         parameters=[{'use_sim_time': True}, 
-    #                     {'yaml_filename':map_file_path}])
+    pkg_share_name = FindPackageShare(pkg_name)
+    config_dir_name = 'config'
 
     # planner node
     planner_config_file_name = 'planner_server.yaml'
+    nav2_yaml = PathJoinSubstitution([pkg_share_name, config_dir_name, planner_config_file_name])
     planner_node = Node(
             package='nav2_planner',
             executable='planner_server',
@@ -36,6 +29,7 @@ def generate_launch_description():
 
     # controller node
     controller_config_file_name = 'controller.yaml'
+    controller_yaml = PathJoinSubstitution([pkg_share_name, config_dir_name, controller_config_file_name])
     controller_node = Node(
             package='nav2_controller',
             executable='controller_server',
@@ -44,6 +38,7 @@ def generate_launch_description():
 
     # manager of recovery behaviors node
     recovery_config_file_name = 'recovery.yaml'
+    recovery_yaml = PathJoinSubstitution([pkg_share_name, config_dir_name, recovery_config_file_name])
     recovery_svr_node = Node(
             package='nav2_recoveries',
             executable='recoveries_server',
@@ -53,6 +48,7 @@ def generate_launch_description():
 
     # behavior tree navigator node
     bt_nav_config_file_name = 'bt_navigator.yaml'
+    bt_navigator_yaml = PathJoinSubstitution([pkg_share_name, config_dir_name, bt_nav_config_file_name])
     bt_nav_node = Node(
             package='nav2_bt_navigator',
             executable='bt_navigator',
@@ -68,10 +64,10 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': True},
                         {'autostart': True},
-                        {'node_names': ['planner_node', 
-                                        'controller_node',
-                                        'recovery_svr_node',
-                                        'bt_nav_node']}]
+                        {'node_names': ['planner_server', 
+                                        'controller_server',
+                                        'recoveries_server',
+                                        'bt_navigator']}]
     )
     
     return LaunchDescription([

@@ -22,3 +22,14 @@
 2. The reason `DWBLocalPlanner` is called that instead of `DWA...` are not clear and appear to have a historical component.
 3. In `bt_navigator`, "bt" stands for **b**ehavior **t**ree.
 
+#### Launching
+
+1. `ros2 launch localization_server localization.launch.py`.
+2. `ros2 launch path_planner_server pathplanner.launch.py`.
+3. In Rviz2, pick **2D Pose Estimate**. Optionally, move around until localziation converges.
+4. In Rviz2, pick **2D Goal Pose**.
+
+#### Path to goal
+
+| Path |
+| --- |
