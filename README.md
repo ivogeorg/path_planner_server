@@ -19,3 +19,6 @@
 > the distance to the next obstacle on the trajectory. In extensive experiments the
 > approach presented here has been found to safely control our mobile robot RHINO
 > with speeds of up to 95 cm/sec, in populated and dynamic environments.
+2. The reason `DWBLocalPlanner` is called that instead of `DWA...` are not clear and appear to have a historical component.
+3. In `bt_navigator`, "bt" stands for **b**ehavior **t**ree.
+
