@@ -203,9 +203,9 @@ float32 distance_remaining
 6. Visualization (using `footprint`):
    | Narrow passage | Local costmap |
    | --- | --- |
-   | ![Narrow](assets/robot_footprint_narrow_passage_gazebo.png) | ![Local](assets/robot_footprint_local_costmap_rviz2.png) |  
+   | ![Narrow](assets/robot_footprint_narrow_passage_gazebo.png) | ![Local](assets/robot_fooprint_local_costmap_rviz2.png) |  
 
-7. Visualization (single launch file):
+7. Visualization (single [`navigation.launch.py`](launch/navigation.launch.py) file):
    | Gazebo | Rviz2 |
    | --- | --- |
    | ![Gazebo](assets/nav_gazebo.png) | ![Rviz2](assets/nav_rviz2.png) |  
