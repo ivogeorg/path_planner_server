@@ -159,3 +159,31 @@ int16 number_of_recoveries
 float32 distance_remaining
 ```
 
+#### Adding costmap
+
+1. Types:
+   1. Global
+   2. Local
+
+2. ROS2 topics:
+   ```
+   user:~$ ros2 topic list | grep costmap
+   /global_costmap/costmap
+   /global_costmap/costmap_raw
+   /global_costmap/costmap_updates
+   /global_costmap/footprint
+   /global_costmap/global_costmap/transition_event
+   /global_costmap/published_footprint
+   /local_costmap/costmap
+   /local_costmap/costmap_raw
+   /local_costmap/costmap_updates
+   /local_costmap/footprint
+   /local_costmap/local_costmap/transition_event
+   /local_costmap/published_footprint
+   ```
+
+3. Visualization:
+   | Environment | Costmap |
+   | --- | --- |
+   | ![Env](assets/environment_gazebo.png) | ![Cost](assets/cost_rviz2.png) |  
+   
