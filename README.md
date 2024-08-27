@@ -204,4 +204,8 @@ float32 distance_remaining
    | Narrow passage | Local costmap |
    | --- | --- |
    | ![Narrow](assets/robot_footprint_narrow_passage_gazebo.png) | ![Local](assets/robot_footprint_local_costmap_rviz2.png) |  
- 
+
+7. Visualization (single launch file):
+   | Gazebo | Rviz2 |
+   | --- | --- |
+   | ![Gazebo](assets/nav_gazebo.png) | ![Rviz2](assets/nav_rviz2.png) |  
