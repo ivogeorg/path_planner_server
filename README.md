@@ -191,3 +191,17 @@ float32 distance_remaining
    | Obstacles | Local costmap |
    | --- | --- |
    | ![Obs](assets/obstacles_gazebo.png) | ![Local](assets/local_costmap_rviz2.png) |  
+
+5. Robot shape:
+   1. For round robots, use parameter `robot_radius`. Goes with the `BaseObstacle` critic.
+   2. For complicated/non-regular robots, use parameter `footprint`. Goes with the `ObstacleFootprint` critic. Specify as follows (turtlebot corners):
+      ```
+      footprint: '[ [0.089, 0.069], [0.089, -0.069], [-0.089, -0.069], [-0.089, 0.069] ]'
+      ```
+   3. `robot_radius` and `footprint` are **mutually exclusive**.
+
+6. Visualization (using `footprint`):
+   | Narrow passage | Local costmap |
+   | --- | --- |
+   | ![Narrow](assets/robot_footprint_narrow_passage_gazebo.png) | ![Local](assets/robot_footprint_local_costmap_rviz2.png) |  
+ 
