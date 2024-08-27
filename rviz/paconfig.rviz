@@ -7,11 +7,10 @@ Panels:
         - /Global Options1
         - /TF1/Frames1
         - /RobotModel1/Description Topic1
-        - /LaserScan1
         - /PoseWithCovariance1/Topic1
         - /ParticleCloud1/Topic1
         - /Path1/Topic1
-        - /Map2
+        - /LocalCostmap1
       Splitter Ratio: 0.5
     Tree Height: 553
   - Class: rviz_common/Selection
@@ -293,7 +292,7 @@ Visualization Manager:
       Color Scheme: map
       Draw Behind: false
       Enabled: true
-      Name: Map
+      Name: GlobalCostmap
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -307,6 +306,27 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /global_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: LocalCostmap
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /local_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /local_costmap/costmap_updates
       Use Timestamp: false
       Value: true
   Enabled: true
@@ -355,16 +375,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 5.244636058807373
+      Distance: 5.873992443084717
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.0114057064056396
-        Y: -0.8276726007461548
-        Z: -0.595549464225769
+        X: -0.6829631328582764
+        Y: -0.04105155169963837
+        Z: -0.24262158572673798
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false

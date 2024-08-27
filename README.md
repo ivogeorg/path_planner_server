@@ -182,8 +182,12 @@ float32 distance_remaining
    /local_costmap/published_footprint
    ```
 
-3. Visualization:
-   | Environment | Costmap |
+3. Visualization (global):
+   | Environment | Global costmap |
    | --- | --- |
-   | ![Env](assets/environment_gazebo.png) | ![Cost](assets/cost_rviz2.png) |  
-   
+   | ![Env](assets/environment_gazebo.png) | ![Global](assets/global_costmap_rviz2.png) |  
+
+4. Visualization (local):
+   | Obstacles | Local costmap |
+   | --- | --- |
+   | ![Obs](assets/obstacles_gazebo.png) | ![Local](assets/local_costmap_rviz2.png) |  
